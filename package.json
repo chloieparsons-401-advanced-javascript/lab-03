@@ -1,0 +1,28 @@
+{
+  "name": "lab-03",
+  "version": "1.0.0",
+  "description": "Async",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint **/.js",
+    "test": "jest --coverage --verbose",
+    "test-watch": "jest --watchAll --coverage --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^5.6.1",
+    "jest": "^24.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chloieparsons-401-advanced-javascript/lab-03.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chloieparsons-401-advanced-javascript/lab-03/issues"
+  },
+  "homepage": "https://github.com/chloieparsons-401-advanced-javascript/lab-03#readme"
+}

@@ -6,28 +6,19 @@ const readerPromises = require('../../lib/reader-promises.js');
 
 describe('File Reader Module', () => {
 
-  GOOD TO HERE: WRITE IT STATEMENTS
-
-  it('when given a bad file, returns an error', done => {
+  it('when given a bad file, returns an error', () => {
     let files = ['bad.txt'];
     // In jest, throwing errors obviously kills the app, so if you're
     // going to throw one in a test, have the expect execute your code as a
     // function so that you can trap it.
-    reader(files, (err, data) => {
+    let err = readerPromises(files);
       expect(err).toBeDefined();
-      return done;
-    });
   });
 
 
-  it('reads 3 files', done => {
-    let files = ['file1.txt', 'file2.txt', 'file2.txt'];
-    reader(files, (err,data) => {
-      expect(err).toBeNull();
-      expect(data instanceof Array ).toBeTruthy();
-      expect(data.length ).toBe(3);
-      return done;
-    });
+  it('reads 3 files', () => {
+    let files = ['1.txt', '2.txt', '3.txt'];
+    let err = readerPromises(files);
+    expect(err).toBeDefined();
   });
-
 });

@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 
-
 let args = process.argv;
 
 if(args.length < 2){
@@ -12,16 +11,16 @@ if(args.length < 2){
 
 let sourceFile = args[2];
 
-fs.readFile(`${sourcceFile}`, (err, data) => {
+fs.readFile(sourceFile, (err, data) => {
   if (err) throw err;
   let randomVal = Math.random();
   console.log(data.toString());
 
-  fs.writeFile('./files/test.txt', randomVal, err => {
+  fs.writeFile(sourceFile, randomVal, err => {
     if (err) throw err;
-    fs.readFile('./files/test.txt', (err, data) => {
+    fs.readFile(sourceFile, (err, data) => {
       if (err) throw err;
       console.log(data.toString());
     });
-    });
+  });
 });

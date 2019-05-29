@@ -13,3 +13,7 @@ fileReader(files, (err,data) => {
   if ( err ) { throw err; }
   console.log('From Callback:', data);
 });
+
+// Task 2: Use promises
+
+// Task 3: Use async/await
